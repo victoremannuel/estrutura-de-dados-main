@@ -11,6 +11,7 @@ public class VetorUtilTest {
 
     @Nested
     class CopiarValores {
+
         @Test
         public void testCopiarValores() {
             int[] a = { 1, 2, 3 };
@@ -82,6 +83,7 @@ public class VetorUtilTest {
 
     @Nested
     class SomarVetores {
+        
         @Test
         public void testSomarVetores() {
             int[] a = { 1, 2, 3 };
