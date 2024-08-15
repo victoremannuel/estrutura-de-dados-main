@@ -71,7 +71,6 @@ public class VetorUtil {
                 resultado[indexRes++] = b[indexB++];
             }
         }
-
         return resultado;
     }
 
