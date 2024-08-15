@@ -1,6 +1,6 @@
 package br.com.junitsetup.exercicio;
 
-public interface IVetorUtil {
+public interface VetorUtil {
 
   /**
    * Copie o conteúdo do vetor a para o vetor b
@@ -16,6 +16,7 @@ public interface IVetorUtil {
    * @param a vetor de origem
    * @param b vetor de destino
    */
+  
   public void copiarValoresInverso(int[] a, int[] b);
 
   /**

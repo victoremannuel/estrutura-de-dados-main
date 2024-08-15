@@ -1,11 +1,16 @@
-package br.com.junitsetup.exercicio;
+package br.com.junitsetup;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
+import br.com.junitsetup.exercicio.VetorUtil;
+
 public class VetorUtilTest {
 
-    private final IVetorUtil vetorUtil = new VetorUtilImpl(); 
+    /**
+     *
+     */
+    private final VetorUtil vetorUtil = new VetorUtil(); 
 
     @Test
     public void testCopiarValores() {
