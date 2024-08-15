@@ -117,6 +117,7 @@ public class VetorUtilTest {
 
     @Nested
     class IntercalarElementos {
+        
         @Test
         public void testIntercalarElementos() {
             int[] a = { 1, 3, 5 };
