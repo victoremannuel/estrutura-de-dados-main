@@ -61,14 +61,14 @@ public class VetorUtil {
     public int[] intercalarElementos(int[] a, int[] b) {
         int tamanho = a.length + b.length;
         int[] resultado = new int[tamanho];
-        int indexA = 0, indexB = 0, indexRes = 0;
+        int indexA = 0, indexB = 0, indexResultado = 0;
 
         while (indexA < a.length || indexB < b.length) {
             if (indexA < a.length) {
-                resultado[indexRes++] = a[indexA++];
+                resultado[indexResultado++] = a[indexA++];
             }
             if (indexB < b.length) {
-                resultado[indexRes++] = b[indexB++];
+                resultado[indexResultado++] = b[indexB++];
             }
         }
         return resultado;
