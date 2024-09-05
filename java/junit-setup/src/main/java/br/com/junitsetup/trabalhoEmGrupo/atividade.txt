@@ -1,0 +1,56 @@
+Sobre a matéria de estrutura de dados, faça os quatro métodos de ordenação abaixo implementados em java.
+
+1- método da bolha;
+2- método da bolha otimizado;
+3- ordenação por inserção;
+4- ordenação por seleção;
+
+Para cada um dos métodos acima, incluir funcionalidade que calcule a:
+- quantidade de comparações;
+- quantidade de trocas;
+- tempo de execução;
+
+Crie o seguinte vetor V: [0,1000,5000,10000,15000,20000,25000,30000,35000,40000,45000,50000]
+Crie também um método gerador de vetores que use o número de cada posição do vetor V para gerar os seguintes vetores:
+
+A- vetor ordenado ascendente;
+B- vetor ordenado descendente;
+C- vetor de números aleatórios;
+
+Execuções do método main:
+-----------------------
+Execute o método da bolha N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de comparações para N vezes;
+
+Execute o método da bolha N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de trocas para N vezes;
+
+Execute o método da bolha N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo o tempo de execução para N vezes;
+------------------------
+Execute o método da bolha otimizada N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de comparações para N vezes;
+
+Execute o método da bolha otimizada N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de trocas para N vezes;
+
+Execute o método da bolha otimizada N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo o tempo de execução para N vezes;
+------------------------
+Execute o método da ordenação por inserção N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de comparações para N vezes;
+
+Execute o método da ordenação por inserção N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de trocas para N vezes;
+
+Execute o método da ordenação por inserção N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo o tempo de execução para N vezes;
+------------------------
+Execute o método da ordenação por seleção N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de comparações para N vezes;
+
+Execute o método da ordenação por seleção N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo a quantidade de trocas para N vezes;
+
+Execute o método da ordenação por seleção N vezes para cada uma das posições do vetor V, sendo N o número que está na posição atual do vetor V.
+Imprima no console duas colunas, a primeira contendo o valor que está na posição atual do vetor V em cada linha e na segunda coluna contendo o tempo de execução para N vezes;
