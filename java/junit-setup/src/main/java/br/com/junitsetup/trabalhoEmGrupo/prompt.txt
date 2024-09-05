@@ -1,0 +1,19 @@
+Sobre a matéria de estrutura de dados, faça os quatro métodos abaixo implementados em java.
+
+1- método da bolha;
+2- método da bolha otimizado;
+3- ordenação por inserção;
+4- ordenação por seleção;
+
+Para cada um dos métodos acima, incluir funcionalidade que calcule a:
+- quantidade de comparações;
+- quantidade de trocas;
+- tempo de execução;
+
+Crie também um método gerador de vetores sendo eles:
+
+A- vetor ordenado ascendente;
+B- vetor ordenado descendente;
+C- vetor de números aleatórios;
+
+Os vetores ter tamanho de 50 mil posições.
