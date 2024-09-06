@@ -13,25 +13,25 @@ public class SortingTest {
             int[] desc = generateDescendingArray(n);
             int[] random = generateRandomArray(n);
 
-            // Bubble Sort
+            // Bolha
             System.out.println("Bubble Sort for N = " + n);
             runBubbleSortTests(n, asc, desc, random);
             
-            // Optimized Bubble Sort
+            // Bolha otimizada
             System.out.println("Optimized Bubble Sort for N = " + n);
             runOptimizedBubbleSortTests(n, asc, desc, random);
             
-            // Insertion Sort
+            // Inserção
             System.out.println("Insertion Sort for N = " + n);
             runInsertionSortTests(n, asc, desc, random);
             
-            // Selection Sort
+            // Seleção
             System.out.println("Selection Sort for N = " + n);
             runSelectionSortTests(n, asc, desc, random);
         }
     }
 
-    // Bubble Sort
+    // Bolha
     public static void bubbleSort(int[] arr, Result result) {
         int n = arr.length;
         result.comparisons = 0;
@@ -48,7 +48,7 @@ public class SortingTest {
         }
     }
 
-    // Optimized Bubble Sort
+    // Bolha Otimizada
     public static void optimizedBubbleSort(int[] arr, Result result) {
         int n = arr.length;
         result.comparisons = 0;
@@ -65,11 +65,11 @@ public class SortingTest {
                     swapped = true;
                 }
             }
-            if (!swapped) break;  // If no swaps, array is already sorted
+            if (!swapped) break;
         }
     }
 
-    // Insertion Sort
+    // Inserção
     public static void insertionSort(int[] arr, Result result) {
         int n = arr.length;
         result.comparisons = 0;
@@ -88,7 +88,7 @@ public class SortingTest {
         }
     }
 
-    // Selection Sort
+    // Seleção
     public static void selectionSort(int[] arr, Result result) {
         int n = arr.length;
         result.comparisons = 0;
@@ -109,42 +109,42 @@ public class SortingTest {
         }
     }
 
-    // Helper method to swap array elements
+    // Método auxiliar para trocar elementos de matriz
     private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
-    // Method to run Bubble Sort tests
+    // Método para executar testes de classificação por bolha
     public static void runBubbleSortTests(int n, int[] asc, int[] desc, int[] random) {
         testAlgorithm(n, "Bubble Sort Ascending", SortingTest::bubbleSort, asc);
         testAlgorithm(n, "Bubble Sort Descending", SortingTest::bubbleSort, desc);
         testAlgorithm(n, "Bubble Sort Random", SortingTest::bubbleSort, random);
     }
 
-    // Method to run Optimized Bubble Sort tests
+    // Método para executar testes de classificação de bolhas otimizadas
     public static void runOptimizedBubbleSortTests(int n, int[] asc, int[] desc, int[] random) {
         testAlgorithm(n, "Optimized Bubble Sort Ascending", SortingTest::optimizedBubbleSort, asc);
         testAlgorithm(n, "Optimized Bubble Sort Descending", SortingTest::optimizedBubbleSort, desc);
         testAlgorithm(n, "Optimized Bubble Sort Random", SortingTest::optimizedBubbleSort, random);
     }
 
-    // Method to run Insertion Sort tests
+    // Método para executar testes Inserção
     public static void runInsertionSortTests(int n, int[] asc, int[] desc, int[] random) {
         testAlgorithm(n, "Insertion Sort Ascending", SortingTest::insertionSort, asc);
         testAlgorithm(n, "Insertion Sort Descending", SortingTest::insertionSort, desc);
         testAlgorithm(n, "Insertion Sort Random", SortingTest::insertionSort, random);
     }
 
-    // Method to run Selection Sort tests
+    // Método para executar testes Seleção
     public static void runSelectionSortTests(int n, int[] asc, int[] desc, int[] random) {
         testAlgorithm(n, "Selection Sort Ascending", SortingTest::selectionSort, asc);
         testAlgorithm(n, "Selection Sort Descending", SortingTest::selectionSort, desc);
         testAlgorithm(n, "Selection Sort Random", SortingTest::selectionSort, random);
     }
 
-    // Generic test runner for any sorting algorithm
+    // Executor de teste genérico para qualquer algoritmo de classificação
     public static void testAlgorithm(int n, String testName, SortAlgorithm algorithm, int[] originalArray) {
         Result result = new Result();
         long totalTime = 0;
@@ -160,18 +160,18 @@ public class SortingTest {
                 testName, result.comparisons, result.swaps, totalTime / n);
     }
 
-    // Functional interface for sorting algorithms
+    // Interface funcional para algoritmos de classificação
     interface SortAlgorithm {
         void sort(int[] arr, Result result);
     }
 
-    // Class to hold result data (comparisons and swaps)
+    // Classe para armazenar dados de resultado (comparações e trocas)
     static class Result {
         int comparisons;
         int swaps;
     }
 
-    // Methods to generate different types of arrays
+    // Métodos para gerar diferentes tipos de matrizes
     public static int[] generateAscendingArray(int n) {
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
