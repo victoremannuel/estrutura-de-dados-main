@@ -5,10 +5,11 @@ import java.util.Random;
 
 public class SortingTest {
     public static void main(String[] args) {
-        int[] V = {0, 1000, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000};
+        int[] V = { 0, 1000, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000 };
 
         for (int n : V) {
-            if (n == 0) continue;
+            if (n == 0)
+                continue;
             int[] asc = generateAscendingArray(n);
             int[] desc = generateDescendingArray(n);
             int[] random = generateRandomArray(n);
@@ -16,15 +17,15 @@ public class SortingTest {
             // Bolha
             System.out.println("Bubble Sort for N = " + n);
             runBubbleSortTests(n, asc, desc, random);
-            
+
             // Bolha otimizada
             System.out.println("Optimized Bubble Sort for N = " + n);
             runOptimizedBubbleSortTests(n, asc, desc, random);
-            
+
             // Inserção
             System.out.println("Insertion Sort for N = " + n);
             runInsertionSortTests(n, asc, desc, random);
-            
+
             // Seleção
             System.out.println("Selection Sort for N = " + n);
             runSelectionSortTests(n, asc, desc, random);
@@ -65,7 +66,8 @@ public class SortingTest {
                     swapped = true;
                 }
             }
-            if (!swapped) break;
+            if (!swapped)
+                break;
         }
     }
 
@@ -148,13 +150,12 @@ public class SortingTest {
     public static void testAlgorithm(int n, String testName, SortAlgorithm algorithm, int[] originalArray) {
         Result result = new Result();
         long totalTime = 0;
-        for (int i = 0; i < n; i++) {
-            int[] arrCopy = Arrays.copyOf(originalArray, originalArray.length);
-            long startTime = System.nanoTime();
-            algorithm.sort(arrCopy, result);
-            long endTime = System.nanoTime();
-            totalTime += (endTime - startTime);
-        }
+
+        int[] arrCopy = Arrays.copyOf(originalArray, originalArray.length);
+        long startTime = System.nanoTime();
+        algorithm.sort(arrCopy, result);
+        long endTime = System.nanoTime();
+        totalTime += (endTime - startTime);
 
         System.out.printf("%s: Comparisons = %d, Swaps = %d, Time = %d ns%n",
                 testName, result.comparisons, result.swaps, totalTime / n);
