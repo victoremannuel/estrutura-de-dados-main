@@ -1,4 +1,4 @@
-package br.com.junitsetup.trabalhoEmGrupo;
+package br.edu.ifgoiano.trabalhoEmGrupo;
 
 import java.util.Arrays;
 import java.util.Random;
