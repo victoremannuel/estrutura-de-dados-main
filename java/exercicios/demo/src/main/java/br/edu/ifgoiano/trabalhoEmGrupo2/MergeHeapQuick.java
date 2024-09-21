@@ -25,15 +25,15 @@ public class MergeHeapQuick {
             runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::mergeSort);
             runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::mergeSort);
 
-            System.out.println("# Heap Sort");
-            runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::heapSort);
-            runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::heapSort);
-            runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::heapSort);
+            // System.out.println("# Heap Sort");
+            // runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::heapSort);
+            // runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::heapSort);
+            // runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::heapSort);
 
-            System.out.println("# Quick Sort");
-            runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::quickSort);
-            runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::quickSort);
-            runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::quickSort);
+            // System.out.println("# Quick Sort");
+            // runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::quickSort);
+            // runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::quickSort);
+            // runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::quickSort);
         }
     }
 
