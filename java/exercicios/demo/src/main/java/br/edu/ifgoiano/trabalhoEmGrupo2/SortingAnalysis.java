@@ -3,7 +3,7 @@ package br.edu.ifgoiano.trabalhoEmGrupo2;
 import java.util.Arrays;
 import java.util.Random;
 
-public class MergeHeapQuick {
+public class SortingAnalysis {
     private static class Metrics {
         long swaps = 0;
         long comparisons = 0;
@@ -11,30 +11,88 @@ public class MergeHeapQuick {
     }
 
     public static void main(String[] args) {
-        int[] sizes = {1000, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000};
+        int[] sizes = {1000, 5000, 10000/*, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000*/};
         Random random = new Random();
+        
+        // // Merge Sort Ordenado
+        // System.out.println("# Merge");
+        // for (int size : sizes) {
+        //     // Arrays já ordenados
+        //     int[] sortedArray = createSortedArray(size);
 
+
+        //     runSortsAndPrint("Ordenado", size, sortedArray, SortingAnalysis::mergeSort);
+        // }
+
+        // // Merge Sort Reverso
+        // System.out.println("# Merge");
+        // for (int size : sizes) {
+        //     // Arrays já ordenados
+        //     int[] reverseArray = createReverseArray(size);
+
+        //     runSortsAndPrint("Reverso", size, reverseArray, SortingAnalysis::mergeSort);
+        // }
+
+        // // Merge Sort Aleatório
+        // System.out.println("# Merge");
+        // for (int size : sizes) {
+        //     // Arrays já ordenados
+        //     int[] randomArray = createRandomArray(size, random);
+
+        //     runSortsAndPrint("Aleatorio", size, randomArray, SortingAnalysis::mergeSort);
+        // }
+        
+        // // Heap Sort Ordenado
+        // System.out.println("# Heap");
+        // for (int size : sizes) {
+        //     int[] sortedArray = createSortedArray(size);
+
+        //     runSortsAndPrint("Ordenado", size, sortedArray, SortingAnalysis::heapSort);
+        // }
+
+        // // Heap Sort Reverso
+        // System.out.println("# Heap");
+        // for (int size : sizes) {
+        //     int[] reverseArray = createReverseArray(size);
+
+        //     runSortsAndPrint("Reverso", size, reverseArray, SortingAnalysis::heapSort);
+        // }
+
+        // // Heap Sort Aleatório
+        // System.out.println("# Heap");
+        // for (int size : sizes) {
+
+        //     int[] randomArray = createRandomArray(size, random);
+
+        //     runSortsAndPrint("Aleatorio", size, randomArray, SortingAnalysis::heapSort);
+        // }
+        
+        // Quick Sort Ordenado
+        System.out.println("# Quick");
         for (int size : sizes) {
-            // Arrays já ordenados
             int[] sortedArray = createSortedArray(size);
-            int[] reverseArray = createReverseArray(size);
-            int[] randomArray = createRandomArray(size, random);
 
-            System.out.println("# Merge Sort");
-            runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::mergeSort);
-            runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::mergeSort);
-            runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::mergeSort);
 
-            // System.out.println("# Heap Sort");
-            // runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::heapSort);
-            // runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::heapSort);
-            // runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::heapSort);
+            runSortsAndPrint("Ordenado", size, sortedArray, SortingAnalysis::quickSort);
 
-            // System.out.println("# Quick Sort");
-            // runSortsAndPrint("Ordenado", size, sortedArray, MergeHeapQuick::quickSort);
-            // runSortsAndPrint("Reverso", size, reverseArray, MergeHeapQuick::quickSort);
-            // runSortsAndPrint("Aleatorio", size, randomArray, MergeHeapQuick::quickSort);
         }
+
+        // // Quick Sort Reverso
+        // System.out.println("# Quick");
+        // for (int size : sizes) {
+
+        //     int[] reverseArray = createReverseArray(size);
+
+        //     runSortsAndPrint("Reverso", size, reverseArray, SortingAnalysis::quickSort);
+        // }
+
+        // // Quick Sort Aleatório
+        // System.out.println("# Quick");
+        // for (int size : sizes) {
+        //     int[] randomArray = createRandomArray(size, random);
+
+        //     runSortsAndPrint("Aleatorio", size, randomArray, SortingAnalysis::quickSort);
+        // }
     }
 
     private static void runSortsAndPrint(String type, int size, int[] array, SortingFunction sortFunction) {
