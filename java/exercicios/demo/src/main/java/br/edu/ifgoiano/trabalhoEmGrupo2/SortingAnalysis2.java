@@ -3,7 +3,7 @@ package br.edu.ifgoiano.trabalhoEmGrupo2;
 import java.util.Arrays;
 import java.util.Random;
 
-public class SortingAnalysis {
+public class SortingAnalysis2 {
     private static class Metrics {
         long swaps = 0;
         long comparisons = 0;
@@ -13,85 +13,42 @@ public class SortingAnalysis {
     public static void main(String[] args) {
         int[] sizes = {1000, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000};
         Random random = new Random();
-        
-        // Merge Sort Ordenado
-        System.out.println("# Merge");
-        for (int size : sizes) {
-            // Arrays já ordenados
-            int[] sortedArray = createSortedArray(size);
 
+        String[] sortMethods = {"Merge", "Heap", "Quick"};
+        String[] arrayTypes = {"Ordenado", "Reverso", "Aleatorio"};
 
-            runSortsAndPrint("Ordenado", size, sortedArray, SortingAnalysis::mergeSort);
-        }
+        for (String sortMethod : sortMethods) {
+            System.out.println("========================================");
+            System.out.println("Ordenação: " + sortMethod);
+            System.out.println("========================================");
+            for (String arrayType : arrayTypes) {
+                System.out.println("\n# " + arrayType);
+                for (int size : sizes) {
+                    int[] array = null;
+                    switch (arrayType) {
+                        case "Ordenado":
+                            array = createSortedArray(size);
+                            break;
+                        case "Reverso":
+                            array = createReverseArray(size);
+                            break;
+                        case "Aleatorio":
+                            array = createRandomArray(size, random);
+                            break;
+                    }
 
-        // Merge Sort Reverso
-        System.out.println("# Merge");
-        for (int size : sizes) {
-            // Arrays já ordenados
-            int[] reverseArray = createReverseArray(size);
-
-            runSortsAndPrint("Reverso", size, reverseArray, SortingAnalysis::mergeSort);
-        }
-
-        // Merge Sort Aleatório
-        System.out.println("# Merge");
-        for (int size : sizes) {
-            // Arrays já ordenados
-            int[] randomArray = createRandomArray(size, random);
-
-            runSortsAndPrint("Aleatorio", size, randomArray, SortingAnalysis::mergeSort);
-        }
-        
-        // Heap Sort Ordenado
-        System.out.println("# Heap");
-        for (int size : sizes) {
-            int[] sortedArray = createSortedArray(size);
-
-            runSortsAndPrint("Ordenado", size, sortedArray, SortingAnalysis::heapSort);
-        }
-
-        // Heap Sort Reverso
-        System.out.println("# Heap");
-        for (int size : sizes) {
-            int[] reverseArray = createReverseArray(size);
-
-            runSortsAndPrint("Reverso", size, reverseArray, SortingAnalysis::heapSort);
-        }
-
-        // Heap Sort Aleatório
-        System.out.println("# Heap");
-        for (int size : sizes) {
-
-            int[] randomArray = createRandomArray(size, random);
-
-            runSortsAndPrint("Aleatorio", size, randomArray, SortingAnalysis::heapSort);
-        }
-        
-        // Quick Sort Ordenado
-        System.out.println("# Quick");
-        for (int size : sizes) {
-            int[] sortedArray = createSortedArray(size);
-
-
-            runSortsAndPrint("Ordenado", size, sortedArray, SortingAnalysis::quickSort);
-
-        }
-
-        // Quick Sort Reverso
-        System.out.println("# Quick");
-        for (int size : sizes) {
-
-            int[] reverseArray = createReverseArray(size);
-
-            runSortsAndPrint("Reverso", size, reverseArray, SortingAnalysis::quickSort);
-        }
-
-        // Quick Sort Aleatório
-        System.out.println("# Quick");
-        for (int size : sizes) {
-            int[] randomArray = createRandomArray(size, random);
-
-            runSortsAndPrint("Aleatorio", size, randomArray, SortingAnalysis::quickSort);
+                    if (sortMethod.equals("Merge")) {
+                        runSortsAndPrint(arrayType, size, array, SortingAnalysis::mergeSort);
+                    } else if (sortMethod.equals("Heap")) {
+                        runSortsAndPrint(arrayType, size, array, SortingAnalysis::heapSort);
+                    } else if (sortMethod.equals("Quick")) {
+                        runSortsAndPrint(arrayType, size, array, SortingAnalysis::quickSort);
+                    }
+                }
+            }
+            System.out.println("========================================");
+            System.out.println("Fim da combinação com " + sortMethod);
+            System.out.println("========================================\n");
         }
     }
 
