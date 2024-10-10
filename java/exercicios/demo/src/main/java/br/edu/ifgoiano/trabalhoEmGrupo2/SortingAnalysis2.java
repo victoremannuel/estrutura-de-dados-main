@@ -36,14 +36,14 @@ public class SortingAnalysis2 {
                             array = createRandomArray(size, random);
                             break;
                     }
-
+/*
                     if (sortMethod.equals("Merge")) {
                         runSortsAndPrint(arrayType, size, array, SortingAnalysis::mergeSort);
                     } else if (sortMethod.equals("Heap")) {
                         runSortsAndPrint(arrayType, size, array, SortingAnalysis::heapSort);
                     } else if (sortMethod.equals("Quick")) {
                         runSortsAndPrint(arrayType, size, array, SortingAnalysis::quickSort);
-                    }
+                    }*/
                 }
             }
             System.out.println("========================================");
